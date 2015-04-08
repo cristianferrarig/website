@@ -1,0 +1,13 @@
+---
+en:
+
+  home:
+    title: "Hi.<br/> I’m Cristian, a Digital Product Designer, playing and working in Santiago, Chile."
+    question: "What can I do for you?"
+
+  services:
+    strategy: "Product Strategy"
+    experience: "User Experience"
+    interface: "Interface Design"
+    brand: "Brand Identity"
+    front: "Front-end Development"

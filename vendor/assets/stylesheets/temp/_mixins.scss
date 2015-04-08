@@ -1,0 +1,9 @@
+@mixin expose-map($map) {
+  @each $property, $value in $map  {
+    #{$property}: $value;
+  }
+}
+
+@mixin block($padding) {
+  padding: $padding;
+}

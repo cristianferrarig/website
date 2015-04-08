@@ -1,0 +1,27 @@
+= wrap_layout :layout do
+  .container
+    .docs-page
+      %header.docs-header
+        .brand.horizontal-solid-3 PREY
+        %nav.docs-nav
+          %ul.docs-menu
+            %li= link_to 'Getting started', '/getting-started.html', class: "docs-link"
+            %li= link_to 'Branding', '/branding.html', class: "docs-link"
+            %li= link_to 'Typography', '/typography.html', class: "docs-link"
+            %li= link_to 'Schema', '/schema.html', class: "docs-link"
+            %li= link_to 'Themes', '/themes.html', class: "docs-link"
+      %hr
+
+      %section.docs-body.content
+        -# %ul.docs-menu
+        -#   %li
+        -#     %a.docs-link{:href => "#type"} Typography
+
+        = yield
+
+      %hr
+      %footer.docs-footer
+        %ul.docs-menu
+          %li Prey
+          %li= link_to 'preyproject.com', 'http://preyproject.com', class: "docs-link"
+          %li= link_to 'About', '/about.html', class: "docs-link"
