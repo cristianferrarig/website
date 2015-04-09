@@ -1,8 +1,12 @@
-description: ""
-keywords:    ""
-author:      "Cristian Ferrari"
-
 title:       "Cristian Ferrari | Digital Product Designer"
 
-ga:          "UA-XXXXX-X"
-gtm:         "GTM-XXXXXX"
+description: "Digital Product Designer"
+keywords:    "product, strategy, user experience, interface, design, brand, identity, front-end"
+author:      "Cristian Ferrari"
+
+analytics:   "UA-XXXXX-X"
+tagmanager:  "GTM-54MVWR"
+
+app_title:   "Cristian"
+app_capable: "yes"
+bar_style:   "black"

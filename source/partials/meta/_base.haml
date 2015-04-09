@@ -6,11 +6,11 @@
 -# Activate ClearType technology for smoothing fonts for easy reading in mobile IE
 %meta{ "http-equiv" => "cleartype", content: "on" }
 
-%meta{ name: "description", content: "" }
-%meta{ name: "keywords",    content: "" }
-%meta{ name: "author",      content: "" }
+%meta{ name: "description", content: "#{data.config.description}" }
+%meta{ name: "keywords",    content: "#{data.config.keywords}" }
+%meta{ name: "author",      content: "#{data.config.author}" }
 
-%title Cristian Ferrari | Digital Product Designer
+%title= data.config.title
 
 -# SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page
--# %link{ rel: "canonical", href: "http://www.vadb.com/" }
+-# %link{ rel: "canonical", href: "http://www.cristianferrari.com/" }

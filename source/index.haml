@@ -1,1 +1,31 @@
-%h1= I18n.t("home.title")
+%h1.title= I18n.t("home.title")
+
+%a.social{ href: "#{data.social.linkedin}" } Linkedin
+%a.social{ href: "#{data.social.github}" }   Github
+%a.social{ href: "#{data.social.twitter}" }  Twitter
+%a.social{ href: "#{data.social.tumblr}" }   Tumblr
+
+%hr
+
+%h6.question= I18n.t("home.question")
+
+%h4.service= I18n.t("services.strategy")
+%h4.service= I18n.t("services.experience")
+%h4.service= I18n.t("services.interface")
+%h4.service= I18n.t("services.brand")
+%h4.service= I18n.t("services.front")
+
+%hr
+
+%h5.extra{ "data-target" => "work" }= I18n.t("work.question")
+%div.content{ id: "work", style: "display: none" }
+  %p= I18n.t("work.answer")
+  = partial "utils/mailchimp"
+
+%hr
+
+%h5.extra{ "data-target" => "contact" }= I18n.t("contact.question")
+%div.content{ id: "contact", style: "display: none" }
+  %p
+    = I18n.t("contact.answer")
+    %a{ href: "" } cristianferrarig@gmail.com

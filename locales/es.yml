@@ -2,8 +2,16 @@
 en:
 
   home:
-    title: "Hi.<br/> I’m Cristian, a Digital Product Designer, playing and working in Santiago, Chile."
+    title: "Hi.<br/> I’m <strong>Cristian Ferrari</strong>, a <strong>Digital Product Designer</strong>, playing and working in Santiago, Chile."
     question: "What can I do for you?"
+
+  work:
+    question: "Want to see my work?"
+    answer: "Thanks for your interest. Soon I will publish my work here, please subscribe to my mailing list to know when I do it."
+
+  contact:
+    question: "Want to get in touch?"
+    answer: "I’m glad to get in touch with you. Please drop me a line to"
 
   services:
     strategy: "Product Strategy"
