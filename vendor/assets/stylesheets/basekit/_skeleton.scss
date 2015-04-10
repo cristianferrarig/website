@@ -48,7 +48,8 @@ $font-color:      #222 !default;
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 //Grid Variables
-$container-width: 960px !default;
+$container-width: 90% !default;
+$container-max-width: 960px !default;
 $container-width-larger-than-mobile: 85% !default;
 $container-width-larger-than-phablet: 80% !default;
 $total-columns: 12 !default;
@@ -67,13 +68,19 @@ $global-radius: 4px !default;
   @return grid-column-width($n) + $column-margin;
 }
 
+// institution/:id/p1:a2:e1:i3:p1:f1
+
+// institution/:id/P1:A2:E1:I3:P1:F1
+
+
+
 // Grid
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: $container-width;
+  width: $container-width;
+  max-width: $container-max-width;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
