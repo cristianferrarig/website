@@ -1,0 +1,13 @@
+$container-width: 90% !default;
+$container-max-width: 960px !default;
+
+.container {
+  @include clearfix;
+  position: relative;
+  width: $container-width;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $gutter;
+  // Comentado por ahora, oculta el .magnify
+  // overflow: auto;
+}

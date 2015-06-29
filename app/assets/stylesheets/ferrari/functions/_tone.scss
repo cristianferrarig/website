@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/// Mixes a color with gray.
+///
+/// @param {Color} $color
+///
+/// @param {Number (Percentage)} $percent
+///   The amount of gray to be mixed in.
+///
+/// @example scss - Usage
+///   .element {
+///     background-color: tone(#ffbb52, 60%);
+///   }
+///
+/// @example css - CSS Output
+///   .element {
+///     background-color: #664a20;
+///   }
+///
+/// @return {Color}
+
+@function tone($color, $percent) {
+  @return mix(gray, $color, $percent);
+}

@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import "common";
+
+body { background-color: $brand-color; }
+hr { @include alpha-attr(border-top-color,rgba(black,.15),$brand-color); }
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.social {
+  & {
+    font-size: 12px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    margin-right: 16px;
+    text-decoration: none;
+    @include alpha-attr(color,rgba(black,.5),$brand-color);
+  }
+  &:hover {
+    color: black;
+  }
+}
+
+.question {
+  text-transform: uppercase;
+  font-weight: $bold;
+  margin-bottom: 1rem;
+}
+
+.service {
+  @include alpha-attr(color,rgba(white,.7),$brand-color);
+  margin-bottom: 1rem;
+}
+
+.extra {
+  & {
+    cursor: pointer;
+    font-weight: $bold;
+    text-decoration: none;
+    @include alpha-attr(color,rgba(white,.8),$brand-color);
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+.content {
+  width: 100% !important;
+  @include alpha-attr(color,rgba(white,.9),$brand-color);
+
+  a {
+    & {
+      @include alpha-attr(color,rgba(white,.9),$brand-color);
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.email {
+  color: black;
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  &[type="submit"].button-primary,
+  &[type="reset"].button-primary,
+  &[type="button"].button-primary {
+    & {
+      color: white;
+      background-color: $brand-color;
+      border: 2px solid white;
+    }
+
+    &:hover {
+      color: $brand-color;
+      background-color: white;
+      border-color: white;
+    }
+  }
+}

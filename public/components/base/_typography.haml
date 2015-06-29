@@ -1,0 +1,131 @@
+%h1 Typography
+
+%h3 Scale & basic styles
+%p Too many type sizes and styles at once can wreck any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. The basic set of styles are based on a typographic scale of 12, 14, 16, 20 and 34.
+%br
+%h3 Line height
+%p To achieve proper readability and appropriate pacing, line heights have been determined based on each style’s individual size and weight. Line wrapping only applies to Body, Subhead, Headline, and the smaller Display styles. All other styles should exist as single lines.
+
+%hr
+
+%h2 Display
+.docs-example.bg-white
+  .caption.hint <b>.display4</b> | Uni-sans · Type 112px · Weight 700 · Tracking   -10 · Leading 1
+  .display4 Titles grumpy
+  .caption.hint <b>.display3</b> | Uni-sans · Type 56px · Weight 700 · Tracking -5 · Leading 1.1
+  .display3 Titles grumpy wizards
+  .caption.hint <b>.display2</b> | Uni-sans · Type 45px · Weight 700 · Tracking 0 · Leading 48px
+  .display2 Titles grumpy wizards
+  .caption.hint <b>.display1</b> | Uni-sans · Type 34px · Weight 700 · Tracking 0 · Leading 40px
+  .display1 Titles grumpy wizards
+.docs-code
+  :code
+    # lang: html
+    <div class="display4"> ... </div>
+    <div class="display3"> ... </div>
+    <div class="display2"> ... </div>
+    <div class="display1"> ... </div>
+%hr
+
+
+
+%h2 Headings
+.docs-example.bg-white
+  .caption.hint <b>Headline</b> | Roboto · Type 24px · Weight 700 · Tracking 0 · Leading 32px
+  .headline Titles grumpy wizards
+  .caption.hint <b>Title</b> | Roboto · Type 20px · Weight 500 · Tracking 5 · Leading auto
+  .title Titles grumpy wizards
+  .caption.hint <b>Subhead</b> | Roboto · Type 16px · Weight 400 · Tracking 10 · Leading 28px
+  .subhead Titles grumpy wizards
+.docs-code
+  :code
+    # lang: html
+    <div class="headline"> ... </div>
+    <div class="title"> ... </div>
+    <div class="subhead"> ... </div>
+%hr
+
+
+
+%h2 Copy
+.docs-example.bg-white
+  .caption.hint <b>Lead</b> | Roboto · Type 16px · Weight 300 · Tracking 10 · Leading 30px
+  .lead Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+  .caption.hint <b>Body</b> | Roboto · Type 14px · Weight 400 · Tracking 10 · Leading 1.4
+  .body Curabitur blandit tempus porttitor. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+  .caption.hint <b>Caption</b> | Roboto · Type 12px · Weight 400 · Tracking 20 · Leading auto
+  .caption Curabitur blandit tempus porttitor
+.docs-code
+  :code
+    # lang: html
+    <div class="lead"> ... </div>
+    <div class="body"> ... </div>
+    <div class="caption"> ... </div>
+%hr
+
+
+
+%h2 Semantic Markup With Sass
+%p Like the previous examples, you also have the following mixins to create your own classes. By using this mixins you to don't have to put the <code>.brand</code> class.
+.docs-code
+  :code
+    # lang: scss
+    // @param {string} $name - Typography style name
+    @include typography($name);
+%p You can use our mixins to use the brand typographt on your own markup, like this one:
+.docs-example.bg-white
+  .docs-example-type.columns.one-columns
+    .column
+      %p.my-metadata &hearts; 17 de Febrero de 2015 &nbsp;&nbsp; &hearts; hace 10 minutos
+      %p.my-title Sed posuere consectetur est at lobortis.
+      %p.my-lead Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+      %p.my-body Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+.docs-code.join
+  :code
+    # lang: scss
+    // In your stylesheet
+    .my-metadata { @include typography(caption); }
+    .my-title    { @include typography(display3); }
+    .my-lead     { @include typography(lead); }
+    .my-body     { @include typography(body); }
+  :code
+    # lang: html
+    <!-- In your HTML -->
+    <h1 class="my-title"> ... </h1>
+    <p class="my-metadata hint"> ... </h1>
+    <p class="my-lead"> ... </h1>
+    <p class="my-body"> ... </h1>
+%p Also you can do of this way:
+.docs-code.join
+  :code
+    # lang: scss
+    // In your stylesheet
+    span { @include typography(caption); }
+    h1   { @include typography(display1); }
+    h3   { @include typography(lead); }
+    p    { @include typography(body); }
+  :code
+    # lang: html
+    <!-- In your HTML -->
+    <span> ... </span>
+    <h1> ... </h1>
+    <h2> ... </h2>
+    <p> ... </p>
+%hr
+
+
+
+%h2 Combinations
+.columns
+  .column
+    .display2 Nullam id dolor idnibh ultricies dortem.
+    .subhead Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+  .column
+    .display1 Nullam id dolor id nibh ultricies vehicula ut id elit.
+    .subhead Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+  .column
+    .headline Nullam id dolor idnibh ultricies dortem.
+    %p Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+  .column
+    .subhead Nullam id dolor id nibh ultricies vehicula ut id elit.
+    %p Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.

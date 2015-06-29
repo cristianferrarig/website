@@ -1,0 +1,32 @@
+@include export-once("utilities") {
+  @if $include-html-utilities-classes {
+
+    .cf, .clearfix {
+      @include clearfix();
+    }
+    .ellipsis {
+      @include ellipsis();
+    }
+
+    .hidden { display: none !important; }
+
+    .text {
+      &-left    { text-align:  left;    }
+      &-center  { text-align:  center;  }
+      &-right   { text-align:  right;   }
+      &-justify { text-align:  justify; }
+      &-nowrap  { white-space: nowrap;  }
+    }
+
+    .text {
+      &-brand     { color: $brand-color; }
+      &-primary   { color: $brand-color; }
+
+      &-success   { color: $success-color; }
+      &-warning   { color: $warning-color; }
+      &-danger    { color: $danger-color; }
+      &-info      { color: $notice-color; }
+    }
+
+  }
+}

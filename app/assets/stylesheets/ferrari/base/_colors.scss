@@ -1,0 +1,38 @@
+$brand-color:   #0081C2 !default;
+$primary-color: #607D8B !default;
+$accent-color:  #B9F6CA !default;
+
+$darkest-tone:  #131B26 !default;
+$darker-tone:   #1F2938 !default;
+$dark-tone:     #4D5766 !default;
+$light-tone:    #C0C7D1 !default;
+$lighter-tone:  #D5DBE3 !default;
+$lightest-tone: #F0F3F7 !default;
+
+$success-color: #24B36B !default;
+$warning-color: #FFBB27 !default;
+$danger-color:  #C60025 !default;
+$notice-color:  #3DB4CC !default;
+
+$dark-color:    $darker-tone   !default;
+$light-color:   $lightest-tone !default;
+
+$dark-shades: (
+  primary:   .9,
+  secondary: .6,
+  icon :     .5,
+  hint:      .3,
+  divider:   .1,
+) !default;
+
+$light-shades: (
+  primary:    1,
+  icon :     .8,
+  secondary: .7,
+  hint:      .3,
+  divider:   .1,
+) !default;
+
+// FIXME: Eliminar esto
+$tint-factor:   80% !default; // Used for -light version of semantic colors. ex: `$succes-color-light`
+$shade-factor:  30% !default; // Used for -dark version of semantic colors. ex: `$warning-color-dark`

@@ -3,18 +3,22 @@ activate :i18n
 activate :directory_indexes
 activate :syntax, :line_numbers => true
 
+page "/*",            :layout => "website.haml"
+page "/components/*", :layout => "components.haml"
+
 ready do
-  sprockets.append_path 'vendor/assets'
-  sprockets.append_path File.join root, 'vendor/bower'
+  sprockets.append_path 'app/assets'
+  sprockets.append_path File.join root, 'app/bower'
+  # sprockets.append_path File.join "#{root}", 'vendor/bower/'
+  # sprockets.import_asset 'jquery'
+  # sprockets.import_asset 'hashgrid'
 end
 
-set :source,       "source"
+set :source,       "public"
 set :build_dir,    "build"
 
-set :layouts_dir,  "layouts"
-set :partials_dir, "partials"
-
-set :assets_dir,   "assets"
+set :layouts_dir,  "../layouts"
+set :partials_dir, "../partials"
 
 # relative to source
 set :css_dir,      "assets/stylesheets"
