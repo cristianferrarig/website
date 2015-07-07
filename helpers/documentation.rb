@@ -1,30 +1,33 @@
 def swatch(type,name,color)
-  if type == "tone"
-    color_block = "<div class='color-block bg-#{name}'></div>"
-    variables   = "$#{name}-#{type}"
-  else
-    color_block = "
-      <div class='color-block bg-#{name}-light small'></div>
-      <div class='color-block bg-#{name}'></div>
-      <div class='color-block bg-#{name}-dark small'></div>
+
+  if type != "tone"
+    variables = "
+      $#{name}-#{type} <br/>
+      $#{name}-#{type}-light <br/>
+      $#{name}-#{type}-dark
     "
-    if name == "white"
-      variables = "$#{name}-#{type}"
-    else
-      variables = "
-        $#{name}-#{type}
-        <div class='hint'>$#{name}-#{type}-light</div>
-        <div class='hint'>$#{name}-#{type}-dark</div>
-      "
-    end
+  else
+    variables = "$#{name}-#{type}"
   end
-  template = "
-    <div class='caption'><b>#{name.capitalize}</b></div>
-    #{color_block}
-    <div class='caption'>
-      #{variables}
-      <div class='hint'>#{color}</div>
+
+  light_block = "<div class='color-block bg-#{name}-light small'></div>"
+  dark_block  = "<div class='color-block bg-#{name}-dark small'></div>"
+
+  base_block = "
+    <div class='color-block bg-#{name} light'>
+      <div class='show-on-hover'>
+        <div class='body primary'><strong>#{name.capitalize}</strong></div>
+        <div class='caption'>#{variables} <br/> #{color}</div>
+      </div>
     </div>
   "
+
+  if type == "tone"
+    template = base_block
+  else
+    template = light_block + base_block + dark_block
+  end
+
   content_tag(:div, template, class: "color-swatch")
+
 end

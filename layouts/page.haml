@@ -1,0 +1,12 @@
+= wrap_layout :website do
+  / .header
+  /   .container
+  /     .logo
+
+  .hero
+    .hero-content
+      .container
+        %h1.display2= current_page.data.title
+        %p.lead= current_page.data.desc
+
+  = yield

@@ -3,9 +3,6 @@ activate :i18n
 activate :directory_indexes
 activate :syntax, :line_numbers => true
 
-page "/*",            :layout => "website.haml"
-page "/components/*", :layout => "components.haml"
-
 ready do
   sprockets.append_path 'app/assets'
   sprockets.append_path File.join root, 'app/bower'

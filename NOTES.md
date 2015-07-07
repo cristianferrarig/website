@@ -1,3 +1,16 @@
+
+website
+
+base
+components
+
+patterns
+playground
+test
+
+
+Skeleton
+
 Bourbon
 Bootstrap
 Foundation
@@ -23,6 +36,10 @@ docs
 
 tools
 
+
+$font-family: 'Open Sans', sans-serif;
+$global-radius: 0;
+// $font-color:  $components-color;
 
 
 

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+$volta-base:   #D0021B;
+$volta-color:  rgba(#FFFFFF,.8);
+$volta-accent: #FFFFFF;
+$docs-base:    #F0F3F7;
+$docs-dark:    darken($docs-base,10%);
+$docs-color:   #3D404D;
+$docs-accent:  #0081C2;
+
+@import "common";
+@import "syntax";
+@import "columns";
+@import "docs";
+@import "home";
+@import "plays";
+
+// $primary, $contras, $accent
+// $background, $foreground, $accent
+
+@mixin page-theme($background, $foreground, $accent) {
+  & {
+    background-color: $background;
+    color: $foreground;
+  }
+  a {
+    color: $accent;
+  }
+  hr {
+    border-top-color: rgba($foreground,.15);
+  }
+}
+
+hr {
+  margin: 5rem 0;
+  width: 60px;
+  border-style: solid;
+  border-width: 1px 0 0;
+  height: 0;
+  clear: both;
+}
+
+.index  { @include page-theme($volta-base, $volta-color, $volta-accent); }
+.base   { @include page-theme($docs-base,  $docs-color,  $docs-accent); }

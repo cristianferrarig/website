@@ -7,27 +7,25 @@
     = partial "meta/brand"
     = partial "meta/tricks"
 
-    = stylesheet_link_tag "website"
+    = stylesheet_link_tag "base"
 
     = partial "utils/oldie"
 
-  - if content_for? :assets
-    = yield :assets
+    - if content_for? :stylesheets
+      = yield :stylesheets
 
-  %body{ class: "website #{page_classes}" }
+  %body{ class: "#{page_classes}" }
+
     =# render "utils/typekit"
+    = partial "utils/tagmanager" if build?
 
-    - if build?
-      = partial "utils/tagmanager"
-
-    .container
-      .logo
-
-      = yield
+    = yield
 
     -# Placed at the end of the document so the pages load faster
     %script{ src: "https://code.jquery.com/jquery-1.10.2.min.js" }
     =# javascript_include_tag  "jquery"
-    = javascript_include_tag  "app"
+
+    - if content_for? :javascript
+      = yield :javascript
 
     =# render "utils/analytics"

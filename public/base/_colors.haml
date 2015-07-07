@@ -1,0 +1,81 @@
+.container
+  %h1 Colors
+  %hr
+  %h2 Base colors
+  %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.
+
+.hero.hero-full
+  .hero-row.hero-middle
+    asd
+  .hero-row.hero-middle
+    .color-swatches.columns.two-columns
+      .column= swatch "color", "primary", "#0F4E6C"
+      .column= swatch "color", "accent",  "#6737DA"
+
+.container
+  %h2 Tones
+  %p Easily make use of two color schemes: tones and semantic. Tones colors provide quick access to commonly used shades of black while semantic include various colors assigned to meaningful contextual values.
+
+.color-swatches.columns.tree-columns
+  .column= swatch "tone", "darkest",  "#131B26"
+  .column= swatch "tone", "darker",   "#1F2938"
+  .column= swatch "tone", "dark",     "#4D5766"
+.color-swatches.columns.tree-columns
+  .column= swatch "tone", "light",    "#C0C7D1"
+  .column= swatch "tone", "lighter",  "#D5DBE3"
+  .column= swatch "tone", "lightest", "#F0F3F7"
+
+.container
+  %h2 Semantic colors
+  %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.
+
+.color-swatches.columns.four-columns
+  .column= swatch "color", "success", "#36B34A"
+  .column= swatch "color", "warning", "#FFB31A"
+  .column= swatch "color", "danger",  "#D92400"
+  .column= swatch "color", "notice",  "#3DB4CC"
+
+.container
+  %h2 Usign this variables with SCSS
+  %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo.
+  %br
+
+  .columns.two-columns
+    .column
+      .docs-example
+        .docs-example-schema
+          .my-class-1
+            %h3 Sed posuere consectetur est at lobortis.
+            %p Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.
+      .docs-code
+        :code
+          # lang: scss
+          // In your stylesheet
+          .my-class {
+            background: $success-color;
+            border-left: 5px solid $success-dark-color  ;
+            color: $lightest-tone;
+          }
+        :code
+          # lang: html
+          <!-- In your HTML -->
+          <div class="my-class"> ... </div>
+    .column
+      .docs-example
+        .docs-example-schema
+          .my-class-2
+            %h3 Sed posuere consectetur est at lobortis.
+            %p Nulla vitae elit libero, a pharetra augue. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Maecenas faucibus mollis interdum.
+      .docs-code
+        :code
+          # lang: scss
+          // In your stylesheet
+          .my-class {
+            background: $white-color;
+            border: 1px solid $notice-light-color;
+            color: $notice-color;
+          }
+        :code
+          # lang: html
+          <!-- In your HTML -->
+          <div class="my-class"> ... </div>

@@ -1,0 +1,34 @@
+.fullscreen-grid {
+  display: table;
+  // table-layout: fixed;
+  width: 100%;
+  height: 100%;
+
+  .col-1 { background-color: red; }
+  .col-2 { background-color: blue; }
+  .col-3 { background-color: orange; }
+  .col-4 { background-color: green; }
+  .col-5 { background-color: gray; }
+  .col-6 { background-color: purple; }
+}
+
+.fullscreen-row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 33.3333%;
+}
+
+.fullscreen-cell {
+  display: table-cell;
+  position: relative;
+}
+
+.fullscreen-tile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}

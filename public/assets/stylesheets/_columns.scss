@@ -1,0 +1,24 @@
+@function columns($unit) {
+  @return (100/$unit) * 1%;
+}
+
+@include respond(from tablet) {
+  .columns {
+    @include clearfix;
+  }
+  .column {
+    & { float: left; }
+    .one-columns    & { width: columns(1); }
+    .two-columns    & { width: columns(2); }
+    .tree-columns   & { width: columns(3); }
+    .four-columns   & { width: columns(4); }
+    .five-columns   & { width: columns(5); }
+    .six-columns    & { width: columns(6); }
+    .seven-columns  & { width: columns(7); }
+    .eight-columns  & { width: columns(8); }
+    .nine-columns   & { width: columns(9); }
+    .ten-columns    & { width: columns(10); }
+    .eleven-columns & { width: columns(10); }
+    .twelve-columns & { width: columns(10); }
+  }
+}
