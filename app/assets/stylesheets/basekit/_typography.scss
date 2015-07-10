@@ -88,7 +88,7 @@ $typography: (
     .title    { @include typography(title);    }
     .subhead  { @include typography(subhead);  }
     .lead     { @include typography(lead);     }
-    .body     { @include typography(body);     }
+    body      { @include typography(body);     }
     .caption  { @include typography(caption);  }
     .menu     { @include typography(menu);     }
     .button   { @include typography(button);   }

@@ -2,31 +2,24 @@
   @if $include-html-utilities-classes {
 
     .cf, .clearfix {
-      @include clearfix();
+      @include clearfix;
     }
     .ellipsis {
-      @include ellipsis();
+      @include ellipsis;
     }
 
     .hidden { display: none !important; }
 
-    .text {
-      &-left    { text-align:  left;    }
-      &-center  { text-align:  center;  }
-      &-right   { text-align:  right;   }
-      &-justify { text-align:  justify; }
-      &-nowrap  { white-space: nowrap;  }
-    }
+    .text-left    { text-align:  left;    }
+    .text-center  { text-align:  center;  }
+    .text-right   { text-align:  right;   }
+    .text-justify { text-align:  justify; }
+    .text-nowrap  { white-space: nowrap;  }
 
-    .text {
-      &-brand     { color: $primary-color; }
-      &-primary   { color: $primary-color; }
+    .pull-right   { float: right !important; }
+    .pull-left    { float: left  !important; }
 
-      &-success   { color: $success-color; }
-      &-warning   { color: $warning-color; }
-      &-danger    { color: $danger-color; }
-      &-info      { color: $notice-color; }
-    }
-
+    .sr-only           { @include sr-only; }
+    .sr-only-focusable { @include sr-only-focusable; }
   }
 }

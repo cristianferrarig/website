@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+@import "heyhey/settings";
+
+$embed-max-width:           520px;
+$embed-base-space:          10px;
+
+$embed-avatar-size:         16px;
+$embed-butron-size:         60px;
+$embed-progress-size:       4px;
+$embed-progress-background: $light-tone;
+
+$embed-border:              1px solid $light-tone;
+$embed-border:              1px solid $light-tone;
+$embed-border-radius:       5px;
+
+$embed-background:          $lightest-tone;
+$embed-accent-color:        $accent-color;
+$embed-attach-color:        $attach-color;
+$embed-primary-color:       $darkest-tone;
+$embed-secondary-color:     $darker-tone;
+
+$embed-action-default:      $primary-color;
+$embed-action-playing:      $accent-color;
+$embed-action-attach:       $attach-color;
+$embed-action-played:       rgba($primary-color,.5);
+
+@import "toolkit";
+@import "basekit";
+
+@import "heyhey/base";
+@import "heyhey/icons";
+@import "heyhey/layout";
+@import "heyhey/post";
+@import "heyhey/player";

@@ -1,0 +1,49 @@
+.embed-line {
+  display: inline-block;
+  vertical-align: top;
+}
+.embed-avatar {
+  width: $embed-avatar-size;
+  height: $embed-avatar-size;
+  border-radius: 50%;
+}
+.embed-user {
+  font-weight: bold;
+  color: $embed-primary-color;
+  margin-right: 6px;
+}
+.embed-text {
+  float: right;
+  @include ellipsis;
+  width: 180px;
+}
+.embed-text-post {
+  display: block;
+}
+.embed-text-attach {
+  display: none;
+}
+
+.embed-actions {
+  .icon {
+    margin-right: $embed-base-space;
+  }
+}
+
+.embed-attach {
+  & {
+    float: right;
+    margin-left: $embed-base-space;
+  }
+  .icon {
+    margin-left: $embed-base-space / 2;
+  }
+}
+
+.embed-time-current {
+  border-right: 1px solid $light-tone;
+  padding-right: $embed-base-space;
+  margin-right: $embed-base-space / 2;
+  transition: opacity .3s;
+  opacity: 0;
+}

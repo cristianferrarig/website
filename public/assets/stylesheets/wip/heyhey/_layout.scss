@@ -1,0 +1,94 @@
+/*
+
+// HTML
+
+<div class="embed">
+  <div class="embed-container">
+    <div class="embed-control"> embed button </div>
+    <div class="embed-content">
+      <div class="embed-header"> post info </div>
+      <div class="embed-body"> progress bar </div>
+      <div class="embed-footer"> post action  </div>
+    </div>
+  </div>
+  <div class="embed-outher"> extra info </div>
+</div>
+
+
+// HAML
+
+.embed
+  .embed-container
+    .embed-control
+      // embed button here
+
+    .embed-content
+      .embed-header
+        // post info here
+      .embed-body
+        // progress bar here
+      .embed-footer
+        // post action here
+
+  .embed-outher
+    // extra info here
+
+*/
+
+.embed {
+  & {
+    max-width: $embed-max-width;
+    color: $embed-primary-color;
+    font-size: 12px;
+    color: $embed-secondary-color;
+  }
+
+  &-container {
+    display: table;
+    width: 100%;
+    background: $embed-background;
+    border: $embed-border;
+    border-radius: $embed-border-radius;
+  }
+  &-outher {
+    & {
+      color: $embed-secondary-color;
+      font-weight: bold;
+      margin: 10px 0;
+      line-height: 10px;
+    }
+    span {
+      text-transform: uppercase;
+    }
+    a {
+      margin-left: 4px;
+    }
+  }
+  &-link {
+    & { color: $embed-secondary-color; }
+    .icon { vertical-align: bottom; }
+  }
+
+
+  &-control,
+  &-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &-control {
+    padding: 10px;
+  }
+  &-content {
+    width: 100%;
+  }
+
+  &-body {
+    margin: 10px 0;
+  }
+  &-header,
+  &-footer {
+    margin-right: 16px;
+    //background: gray;
+  }
+}

@@ -1,0 +1,90 @@
+.embed-button {
+  & {
+    position: relative;
+    display: inline-block;
+    width: $embed-butron-size;
+    height: $embed-butron-size;
+    border-radius: 50%;
+    transition: transform .1s, background-color .2s;
+  }
+  &:active {
+    transform: scale(.90);
+  }
+  .icon {
+    position: absolute;
+    opacity: 0;
+    width: $icon-size-large;
+    height: $icon-size-large;
+    transition: all .25s;
+    transform: rotate(-45deg);
+
+    top: 50%;
+    left: 50%;
+    margin-top: -($icon-size-large / 2);
+    margin-left: -($icon-size-large / 2);
+  }
+}
+
+.embed-progress {
+  background-color: $embed-progress-background;
+  height: $embed-progress-size;
+  overflow: hidden;
+}
+
+.embed-progressbar {
+  height: 100%;
+  float: left;
+}
+
+@mixin embed-theme($color,$icon:false) {
+  .embed-button,
+  .embed-progressbar {
+    background-color: $color;
+  }
+  @if $icon {
+    .icon-#{$icon} {
+      opacity: 1;
+      transform: rotate(-0deg);
+    }
+  }
+}
+
+.embed {
+
+  &.is-playing {
+    @include embed-theme($embed-action-playing, pause);
+    .embed-progressbar { transition: width 8s linear; }
+  }
+
+  &.is-attach {
+    @include embed-theme($embed-action-attach);
+    .embed-progressbar  { transition: width 10s linear; } // TODO: delete this
+    .embed-text-post    { display: none; }
+    .embed-text-attach  { display: block; }
+    .embed-time-current { opacity: 1; }
+  }
+
+  &.is-default {
+    @include embed-theme($embed-action-default, play);
+    .embed-progressbar { display: none; }
+  }
+
+  &.is-played {
+    @include embed-theme($embed-action-played, repeat);
+    .embed-button:hover {
+      & { background-color: $embed-action-default; }
+      .icon-repeat { opacity: 0 !important; transform: rotate(-45deg); }
+      .icon-play   { opacity: 1 !important; transform: rotate(-0deg);}
+    }
+  }
+
+  &.is-switching {
+    .embed-progressbar {
+      float: right;
+      transition: width .5s ease-in;
+    }
+  }
+
+}
+
+

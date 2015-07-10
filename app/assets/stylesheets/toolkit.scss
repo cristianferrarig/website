@@ -7,10 +7,12 @@
 @import "toolkit/mixins/export-once";
 @import "toolkit/mixins/clearfix";
 @import "toolkit/mixins/ellipsis";
+@import "toolkit/mixins/screen-reader";
 
 @import "toolkit/colors";
 @import "toolkit/maps";
 @import "toolkit/directions";
 @import "toolkit/mediaquery";
+@import "toolkit/replace-text";
 
 @import "toolkit/variables";

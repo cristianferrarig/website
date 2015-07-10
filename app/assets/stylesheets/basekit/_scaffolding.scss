@@ -1,17 +1,28 @@
-// [1] Must be 100% for off canvas to work
-// [2] Set box-sizing globally to handle padding and border widths
 
 @include export-once("scaffold") {
   @if $include-html-scaffold-styles {
 
-    html, body {
-      height: 100%; // [1]
-      font-size: 100%;
-      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    // Reset the box-sizing
+    // Set box-sizing globally to handle padding and border widths
+    //
+    // Heads up! This reset may cause conflicts with some third-party widgets.
+    // For recommendations on resolving such conflicts, see
+    // http://getbootstrap.com/getting-started/#third-box-sizing
+
+    * {
+      box-sizing: border-box;
+    }
+    *:before,
+    *:after {
+      box-sizing: border-box;
     }
 
-    *, *:before, *:after {
-      box-sizing: border-box; // [2]
+    // Height must be 100% for off canvas to work
+
+    html, body {
+      height: 100%;
+      font-size: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
 
     body {
@@ -22,11 +33,7 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -moz-font-feature-settings: liga on;
-      //background: $body-bg;
-      //@include typography(body);
-      font-family: $base-font-family;
-      font-style: normal;
-      //color: $body-font-color;
+      background: white;
     }
 
     a,
@@ -66,6 +73,17 @@
       border: 0;
       -ms-interpolation-mode: bicubic;
     }
+
+    // iOS "clickable elements" fix for role="button"
+    //
+    // Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+    // for traditionally non-focusable elements with role="button"
+    // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+    [role="button"] {
+      cursor: pointer;
+    }
+
 
   }
 }

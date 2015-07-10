@@ -2,16 +2,25 @@
 // Set to false if you want to drop support for IE6 and IE7
 // $legacy_browser_support: false !default;
 
-$include-html-styles:             true !default;
-$include-html-classes:            true !default;
+$include-html-reset:              true  !default;
+$include-html-styles:             false !default;
+$include-html-classes:            false !default;
 
-$include-html-scaffold-styles:    $include-html-styles !default;
-$include-html-typography-styles:  $include-html-styles !default;
 
-$include-html-typography-classes: $include-html-classes !default;
-$include-html-utilities-classes:  $include-html-classes !default;
+// BASE
+$include-html-reset-styles:       $include-html-reset   !default;
+$include-html-scaffold-styles:    $include-html-styles  !default;
+$include-html-typography-styles:  $include-html-styles  !default;
+
 $include-html-schema-classes:     $include-html-classes !default;
 $include-html-themes-classes:     $include-html-classes !default;
-$include-html-buttons-classes:    $include-html-classes !default;
+$include-html-typography-classes: $include-html-classes !default;
+$include-html-grid-classes:       $include-html-classes !default;
+$include-html-utilities-classes:  $include-html-classes !default;
+
+
+// ADDONS
 $include-html-shadows-classes:    $include-html-classes !default;
-$include-html-brand-classes:      $include-html-classes !default;
+
+
+// COMPONENTS
