@@ -14,8 +14,11 @@ end
 set :source,       "public"
 set :build_dir,    "build"
 
-set :layouts_dir,  "../layouts"
-set :partials_dir, "../partials"
+set :data_dir,     "config/data"
+set :helpers_dir,  "config/helpers"
+set :locales_dir,  "config/locales"
+set :layouts_dir,  "../config/layouts"
+set :partials_dir, "../config/partials"
 
 # relative to source
 set :css_dir,      "assets/stylesheets"

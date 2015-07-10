@@ -19,7 +19,6 @@ $docs-dark:    darken($docs-base,10%);
 $docs-color:   #3D404D;
 $docs-accent:  #0081C2;
 
-@import "common";
 @import "syntax";
 @import "columns";
 @import "docs";

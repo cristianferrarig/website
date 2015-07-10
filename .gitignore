@@ -23,5 +23,6 @@
 /Gemfile.lock
 /pkg/
 /tmp/
+/temp/
 
 /public/wip
