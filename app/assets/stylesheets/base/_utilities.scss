@@ -1,5 +1,5 @@
 @include export-once("utilities") {
-  @if $include-html-utilities-classes {
+  @if $include-utilities-classes {
 
     .cf, .clearfix {
       @include clearfix;

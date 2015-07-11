@@ -55,7 +55,7 @@ $shadows: (
 }
 
 @include export-once("shadows") {
-  @if $include-html-shadows-classes {
+  @if $include-shadows-addon {
     .shadow-1 { @include shadow-directions(1); }
     .shadow-2 { @include shadow-directions(2); }
     .shadow-3 { @include shadow-directions(3); }

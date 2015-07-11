@@ -79,7 +79,7 @@ $typography: (
 
 @include export-once("typography") {
 
-  @if $include-html-typography-classes {
+  @if $include-typography-classes {
     .display4 { @include typography(display4); }
     .display3 { @include typography(display3); }
     .display2 { @include typography(display2); }

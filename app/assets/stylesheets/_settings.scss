@@ -1,0 +1,37 @@
+// Normalize.scss settings
+// Set to false if you want to drop support for IE6 and IE7
+// $legacy_browser_support: false !default;
+
+$include-reset:         true  !default;
+$include-styles:        false !default;
+$include-classes:       false !default;
+$include-addon:         false !default;
+
+$include: (
+  reset:       true,
+  scaffold:    true,
+) !default;
+
+// BASE
+$include-reset-styles:       $include-reset   !default;
+$include-scaffold-styles:    $include-styles  !default;
+$include-typography-styles:  $include-styles  !default;
+
+$include-schema-classes:     $include-classes !default;
+$include-themes-classes:     $include-classes !default;
+$include-typography-classes: $include-classes !default;
+$include-utilities-classes:  $include-classes !default;
+
+$include-grid-classes:       $include-classes !default;
+
+
+// ADDONS
+$include-shadows-addon:      $include-addon !default;
+$include-brandcolors-addon:  $include-addon !default;
+
+
+// COMPONENTS
+
+@mixin components($names...) {
+
+}

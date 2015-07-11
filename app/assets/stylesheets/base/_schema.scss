@@ -27,7 +27,7 @@ $notice-color-dark:   shade($notice-color,  $shade-factor);
 
 
 @include export-once("schema") {
-  @if $include-html-schema-classes {
+  @if $include-schema-classes {
 
     .bg-darkest       { background-color: $darkest-tone; }
     .bg-darker        { background-color: $darker-tone; }

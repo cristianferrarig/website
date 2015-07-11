@@ -1,11 +1,11 @@
 // <div class="hero">
 //
 // </div>
-//
-//
-//
-//
-//
+
+@include components(
+  buttons,
+  forms,
+);
 
 .hero {
   & {

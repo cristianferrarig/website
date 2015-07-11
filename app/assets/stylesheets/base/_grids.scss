@@ -15,7 +15,7 @@ $container-max-width: 960px !default;
 
 @include export-once("grid") {
 
-  @if $include-html-grid-classes {
+  @if $include-grid-classes {
     .container { @include make-row; }
   }
 

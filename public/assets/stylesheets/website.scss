@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-$include-html-styles:  true;
-$include-html-classes: true;
+$include-styles:  true;
+$include-classes: true;
 
-@import "basekit";
+@import "base";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 

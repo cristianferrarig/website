@@ -1,6 +1,6 @@
 
 @include export-once("scaffold") {
-  @if $include-html-scaffold-styles {
+  @if $include-scaffold-styles {
 
     // Reset the box-sizing
     // Set box-sizing globally to handle padding and border widths

@@ -69,7 +69,7 @@ $themes: (
 }
 
 @include export-once("themes") {
-  @if $include-html-themes-classes {
+  @if $include-themes-classes {
     body      { @include theme-classes(dark); }
     .light    { @include theme-classes(light); }
     .dark     { @include theme-classes(dark); }
