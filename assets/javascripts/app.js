@@ -1,0 +1,1 @@
+$(".extra").click(function(){var t=$(this).data("target");$("#"+t).toggle("slow")});
