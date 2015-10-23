@@ -2,7 +2,7 @@
   "name" : "Cristian Ferrari",
   "homepage": "www.cristianferrari.com",
   "version" : "0.0.1",
-  "directory": "app/bower",
+  "directory": "vendor/bower",
   "dependencies": {
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2",
